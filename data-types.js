@@ -50,8 +50,20 @@ console.log(randomNumRoundToFloor) // this gives between 0 and 10
 
 let firstName = 'Goktug'
 let surname = 'Celikkaya'
-let space = ' '
+let a = 10
+let b = 20
+// let space = ' '
 
-let fullName = firstName + space + surname
+// let fullName = firstName + space + surname
+// let fullname = firstName + ' ' + surname
+// console.log(fullName)
+
+let fullName = `${firstName}
+
+test
+deneme
+
+${a} + ${b} = ${a + b}
+
+${surname}`
 console.log(fullName)
-
