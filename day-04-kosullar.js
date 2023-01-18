@@ -94,6 +94,10 @@ let nums = prompt('herhangi bir sayı yazınız', 'Herhangi bir sayi giriniz..')
 
 if (nums % 2 == 0) {
     console.log(`${nums} is even`)
-} else {
+} 
+else if (prompt('')){
+    console.log('Lütfen bir sayı yazınız')
+}
+ else {
     console.log(`${nums} is an Odd`)
 }
