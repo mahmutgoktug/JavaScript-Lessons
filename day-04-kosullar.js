@@ -90,7 +90,7 @@
 // )
 
 
-let nums = 2
+let nums = prompt('herhangi bir sayı yazınız', 'Herhangi bir sayi giriniz..')
 
 if (nums % 2 == 0) {
     console.log(`${nums} is even`)
