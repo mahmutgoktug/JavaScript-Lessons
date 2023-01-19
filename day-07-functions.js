@@ -55,3 +55,26 @@ const toplama = (num1, num2, ... numbers) => {
 toplama(2, 5, 7, 8, 10)
 
 console.log(hello2('Mahmut', 'Celikkaya'))
+
+function multiply(num1, num2 = 2) {
+    return num1 * num2
+}
+
+console.log(multiply(10))
+console.log(multiply(15, 5))
+
+// call vs. invoke
+
+function test() {
+    console.log('Test fonksiyonu çalıştı!')
+}
+
+//call
+test()
+
+function invoker(func) {
+    func()
+}
+
+//invoke
+invoker(test)
