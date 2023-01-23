@@ -73,4 +73,19 @@ user.getPersonInfo = function() {
     return statement
 }  
 
-console.log(user.getPersonInfo())
+
+//let newUser = Object.assign({}, user)
+let newUser = {...user}
+
+// console.log(user)
+newUser.name = 'Ejder'
+// console.log(newUse)
+
+// console.log( Object.keys(user) );
+// console.log( Object.values(user) );
+
+for (let [key,val] of Object.entries(user)) {
+    //console.log(key, val);
+}
+
+console.log( user.hasOwnProperty('country') );
