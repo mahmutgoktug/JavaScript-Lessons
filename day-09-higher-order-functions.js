@@ -20,9 +20,48 @@ const a = s1 => {
 
 const numbers = [1, 3, 5, 7, 9]
 let total = 0
-let calculate = number => total += number
+let calculate = (number, index) => total += (number + index)
 numbers.forEach(calculate)
-// console.log(total);
+console.log(total);
+
+let users = [
+    {
+        id: 1,
+        name: 'Goktug',
+        age: 21,
+        gender: 1
+    },
+    {
+        id: 2,
+        name: 'Halil',
+        age: 50,
+        gender: 1
+    },
+    {
+        id: 3,
+        name: 'Tugba',
+        age: 50,
+        gender: 2
+    },
+    {
+        id: 4,
+        name: 'Zerafet',
+        age: 29,
+        gender: 2
+    }
+]
+
+users = users.map(user => {
+    if ( user.id === 2 ){
+        user.name = 'Ejder'
+    }
+    return user
+}) 
+
+const women = users.filter(user => user.gender === 2)
+const men = users.filter(user => user.gender === 1)
+
+console.log(women)
 
 function sayHello() {
     console.log('Hello!');
