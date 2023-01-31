@@ -34,13 +34,13 @@ console.log(numbers.reduce((oldValue, currentValue) => oldValue + currentValue, 
 
 let users = [
     {
-        id: 1,
+        id: 2,
         name: 'Goktug',
         age: 21,
         gender: 1
     },
     {
-        id: 2,
+        id: 1,
         name: 'Halil',
         age: 50,
         gender: 1
@@ -59,9 +59,12 @@ let users = [
     }
 ]
 
+users.sort((a, b) => a.name.localeCompare(b.name))
+console.log(users)
+
 const currentUser = users.find(user => user.id === 3)
 // const currentUser = users.findIndex(user => user.id === 3)
-console.log(currentUser)
+// console.log(currentUser)
 
 
 // console.log(
@@ -101,3 +104,10 @@ setTimeout(() => {
       clearTimeout(timeout)
       console.log('timeout işlemi iptal edildi, interval devam edecek...')  
 }, 3000);
+
+const names = ['Goktug', 'Ejder', 'Halil']
+const numaralar = [3, 6, 2, 1, 10, 1.2, 20, 9]
+// numaralar.sort((a, b) => a - b)
+names.sort((a, b) => a.localeCompare(b))
+
+// console.log(names)
