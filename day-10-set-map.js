@@ -22,19 +22,36 @@ const languages = [
     'French'
 ]
 
-const langSet = new Set(languages)
+// const langSet = new Set(languages)
 
-console.log(langSet)
-console.log(langSet.size);
+// console.log(langSet)
+// console.log(langSet.size);
 
-const counts = []
+// const counts = []
 
-for(let l of langSet){
-    const filteredLang = languages.filter(lng => lng === l)
-    counts.push({
-        language: l,
-        count: filteredLang.length
-    })
-}
+// for(let l of langSet){
+//     const filteredLang = languages.filter(lng => lng === l)
+//     counts.push({
+//         language: l,
+//         count: filteredLang.length
+//     })
+// }
 
-console.log(counts);
+// console.log(counts);
+
+const a = [1, 2, 3, 4, 5]
+const b = [3, 4, 5, 6]
+
+// const c = [ ...a , ...b]
+
+// console.log(new Set(c));
+
+// const B = new Set(b)
+// const C = new Set(a.filter(num => B.has(num)))
+
+// console.log(C);
+
+let B = new Set(b)
+console.log(
+    a.filter(num => !B.has(num))
+)
