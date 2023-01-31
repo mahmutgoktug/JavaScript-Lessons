@@ -51,7 +51,18 @@ const b = [3, 4, 5, 6]
 
 // console.log(C);
 
-let B = new Set(b)
+// let B = new Set(b)
+// console.log(
+//     a.filter(num => !B.has(num))
+// )
+
+const map = new Map()
+
+map.set('1', 'str')
+map.set(1, 'num1')
+map.set(true, 'bool1')
+map.set(false, 'bool2')
+
 console.log(
-    a.filter(num => !B.has(num))
-)
+    map.get(1)
+);
