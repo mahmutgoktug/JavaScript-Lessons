@@ -19,10 +19,18 @@ const a = s1 => {
 // console.log( a(5)(10)(20) );
 
 const numbers = [1, 3, 5, 7, 9]
-let total = 0
-let calculate = (number, index) => total += (number + index)
-numbers.forEach(calculate)
-console.log(total);
+
+/* console.log(
+    numbers.find(number => number > 3)
+)
+
+console.log(numbers.reduce((oldValue, currentValue) => oldValue + currentValue, 0)
+) */
+
+// let total = 0
+// let calculate = (number, index) => total += (number + index)
+// numbers.forEach(calculate)
+// console.log(total);
 
 let users = [
     {
@@ -38,18 +46,31 @@ let users = [
         gender: 1
     },
     {
-        id: 3,
-        name: 'Tugba',
-        age: 50,
-        gender: 2
-    },
-    {
         id: 4,
         name: 'Zerafet',
         age: 29,
         gender: 2
+    },
+    {
+        id: 3,
+        name: 'Tugba',
+        age: 50,
+        gender: 2
     }
 ]
+
+const currentUser = users.find(user => user.id === 3)
+// const currentUser = users.findIndex(user => user.id === 3)
+console.log(currentUser)
+
+
+// console.log(
+//     users.every(user => user.gender === 1)
+// )
+
+// console.log(
+//     users.some(user => user.gender === 1)
+// )
 
 users = users.map(user => {
     if ( user.id === 2 ){
@@ -59,9 +80,9 @@ users = users.map(user => {
 }) 
 
 const women = users.filter(user => user.gender === 2)
-const men = users.filter(user => user.gender === 1)
+const men = users.filter(user => user.gender === 1 && user.age > 30)
 
-console.log(women)
+// console.log(women)
 
 function sayHello() {
     console.log('Hello!');
