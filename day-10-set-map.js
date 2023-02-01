@@ -56,13 +56,35 @@ const b = [3, 4, 5, 6]
 //     a.filter(num => !B.has(num))
 // )
 
-const map = new Map()
+// const map = new Map()
 
-map.set('1', 'str')
-map.set(1, 'num1')
-map.set(true, 'bool1')
-map.set(false, 'bool2')
+// map.set('1', 'str')
+// map.set(1, 'num1')
+// map.set(true, 'bool1')
+// map.set(false, 'bool2')
+
+// console.log(
+//     map.get(1)
+// );
+
+const goktug = {
+    name: 'goktug',
+    surname: 'celikkaya'
+}
+
+const ejder = {
+    name: 'ejder'
+}
+
+const map = new Map(Object.entries(goktug))
 
 console.log(
-    map.get(1)
-);
+    Object.fromEntries(map.entries())
+)
+
+// map.set(goktug, 10)
+//     .set(ejder, 20)
+
+// for (let u of map.keys()){
+//     console.log(u);
+// }
