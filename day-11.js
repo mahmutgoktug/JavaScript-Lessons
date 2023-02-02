@@ -27,6 +27,35 @@ const [[firstLanguage, secondLanguage, [firstThirdLanguage]], backend] = stack
 console.log(firstThirdLanguage);
 */
 
-const names = ['goktug', 'halil', 'ejder', 'sahure', 'tugba', 'mahmut'] 
+const names = ['goktug', 'halil', 'faruk', 'sahure', 'tugba', 'mahmut'] 
 
-const [myName, myFatherName] = names
+const [myName, myFatherName, myFriendName, ...otherNames] = names
+
+console.log(myName);
+console.log(myFatherName);
+console.log(myFriendName);
+console.log(otherNames);
+
+
+const countries = [
+    ['Finland', 'Helsinki'],
+    ['Sweden', 'Stockholm'],
+    ['Norway', 'Oslo'],
+    ['Turkey', 'Ankara']
+]
+
+for (const [country, capital] of countries){
+    console.log(`Ülke: ${country} - Başkent: ${capital}`);
+}
+
+const user = {
+    name: 'Goktug',
+    surname: 'Celikkaya',
+    age: 21,
+    pet: {
+        cat: ['Witcher']
+    }
+}
+const {surname: soyad} = user
+
+console.log(soyad);
