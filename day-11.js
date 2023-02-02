@@ -48,6 +48,8 @@ for (const [country, capital] of countries){
     console.log(`Ülke: ${country} - Başkent: ${capital}`);
 }
 
+
+
 const user = {
     name: 'Goktug',
     surname: 'Celikkaya',
@@ -59,3 +61,36 @@ const user = {
 const {surname: soyad} = user
 
 console.log(soyad);
+
+
+
+function multiply([number1, number2]){
+    return number1 * number2
+}
+
+const numbers = [10, 10]
+
+console.log(
+    multiply(numbers)
+);
+
+const numberss = [1, 3, 5]
+const numberss2 = [...numberss]
+
+console.log(numberss);
+
+numberss2.push(10)
+
+console.log(numberss);
+console.log(numberss2);
+
+const userr = {
+    name: 'Goktug',
+    surname: 'Celikkaya'
+}
+
+const userr2 = {...userr}
+userr2.name = 'Ejder'
+
+console.log(userr);
+console.log(userr2);
